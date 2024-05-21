@@ -1,14 +1,7 @@
-package main
+<h1>How to use?</h1>
 
-import (
-	"fmt"
-	"net/smtp"
-
-	loginauth "github.com/rafaelsouzaribeiro/send-email/pkg/login-auth"
-)
-
-func main() {
-	auth := loginauth.LoginAuth("email", "password")
+```go
+auth := loginauth.LoginAuth("email", "password")
 	subject := "Subject: Test Email from Go\n"
 	body := "This is a test email message from Go.\n"
 	msg := []byte(subject + "\n" + body)
@@ -20,5 +13,4 @@ func main() {
 	}
 
 	fmt.Println("Email successfully sent!")
-
-}
+```
